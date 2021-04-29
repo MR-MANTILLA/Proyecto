@@ -7,9 +7,16 @@ class componente{
     private $pz_ram;
     private $pz_video;
     private $pz_fuente;
+    private $pz_dependencia_id;
+    private $dependencia;
 
-    function __construct(){
-        
+    function __construct(/*$pz_referencia,$pz_motherboard,$pz_procesador,$pz_ram,$pz_video,$pz_fuente*/){
+        /*$this->pz_referencia=$pz_referencia;
+        $this->pz_motherboard=$pz_motherboard;
+        $this->pz_procesador=$pz_procesador;
+        $this->pz_ram=$pz_ram;
+        $this->pz_video=$pz_video;
+        $this->pz_fuente=$pz_fuente;*/
     }
 
     function setPzReferencia($pz_referencia){
@@ -29,6 +36,12 @@ class componente{
     }
     function setPzFuente($pz_fuente){
         $this->pz_fuente=$pz_fuente;
+    }
+    function setPzDependenciaId($pz_dependencia_id){
+        $this->pz_dependencia_id=$pz_dependencia_id;
+    }
+    function setDependencia($dependencia){
+        $this->dependencia=$dependencia;
     }
 
 
@@ -50,5 +63,11 @@ class componente{
     }
     function getPzFuente(){
         return $this->pz_fuente;
+    }
+    function getPzDependenciaId(){
+        return $this->pz_dependencia_id;
+    }
+    function getDependencia(){
+        return $this->dependencia;
     }
 }
